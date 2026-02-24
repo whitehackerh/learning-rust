@@ -1,0 +1,20 @@
+# Rust standard library
+/target/
+
+# Cargo.lock file
+Cargo.lock
+
+# Rust binaries
+*.rs.bins
+
+# macOS System files
+.DS_Store
+
+# Profile files
+/profiles/
+
+# IDE and Editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
