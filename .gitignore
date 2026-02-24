@@ -1,5 +1,5 @@
 # Rust standard library
-/target/
+**/target/
 
 # Cargo.lock file
 Cargo.lock
