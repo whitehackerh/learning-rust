@@ -51,7 +51,7 @@ fn main() {
     // 同一スコープ上では可変と不変な参照を同時に存在させられないためエラー
     // let mut v5 = vec![1, 2, 3, 4, 5];
     // let first = &v[0];
-    // v5.push(6);
+    // v5.push(6); <- pushの第一引数が &mut self つまりv5の可変参照
     // println!("The first element is: {first}");
 
     // ベクタ内の値を順に処理
