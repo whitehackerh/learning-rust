@@ -210,18 +210,18 @@ fn main() {
 
     // @束縛
     // 値を保持する変数を生成するのと同時にその値がパターンに一致するかを調べる
-    enum Message {
+    enum Message2 {
         Hello { id: i32 },
     }
-    let msg = Message::Hello { id: 5 };
+    let msg = Message2::Hello { id: 5 };
     match msg {
-        Message::Hello { id: id_variable @ 3..=7 } => {
+        Message2::Hello { id: id_variable @ 3..=7 } => {
             println!("Found an id in range: {}", id_variable)
         },
-        Message::Hello { id: 10..=12 } => {
+        Message2::Hello { id: 10..=12 } => {
             println!("Found an id in another range")
         },
-        Message::Hello { id } => {
+        Message2::Hello { id } => {
             println!("Found some other id: {}", id)
         },
     }
