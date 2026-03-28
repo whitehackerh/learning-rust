@@ -63,6 +63,8 @@ fn main() {
     let r3 = &mut s;
     println!("{}", r3);
 
+    // 可変かつ所有権を奪う関数の呼び出し元
+    xx(s); 
 }
 
 fn calculate_length(s: &String) -> usize {
@@ -76,3 +78,6 @@ fn calculate_length(s: &String) -> usize {
 fn change(some_string: &mut String) {
     some_string.push_str(", world");
 }
+
+// 可変かつ所有権を奪う
+fn xx(mut s: String) {}
