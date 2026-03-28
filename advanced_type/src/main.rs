@@ -1,3 +1,6 @@
+// 長い型に使うと有用
+type Thunk = Box<dyn Fn() + Send + 'static>;
+
 fn main() {
     // 型エイリアス　typeキーワードを使う
     type Kilometers = i32; // <- 同義語になる
@@ -5,8 +8,6 @@ fn main() {
     let y: Kilometers = 5;
     println!("x + y = {}", x + y);
 
-    // 長い型に使うと有用
-    type Thunk = Box<Fn() + Send + 'static>;
     let f: Thunk = Box::new(|| println!("hi"));
 }
 
@@ -14,9 +15,9 @@ fn takes_long_type(f: Thunk) {
     // --snip--
 }
 
-fn returns_long_type() -> Thunk {
-    // --snip--
-}
+// fn returns_long_type() -> Thunk {
+//     // --snip--
+// }
 
 /*
 　Empty型　!
@@ -24,7 +25,8 @@ fn returns_long_type() -> Thunk {
 　・continueも!値
 */
 fn bar() -> ! {
-    // --snip--
+    loop {
+    }
 }
 
 /*
