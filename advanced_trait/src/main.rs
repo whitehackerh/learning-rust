@@ -125,7 +125,7 @@ trait Player {
     fn play(&self);
 }
 // スーパートレイトを必要とするトレイトの定義
-trait Artist: Player {
+trait Artist: Player { // Artistを実装する場合は、Playerも実装しなければならない
     fn perform(&self);
 }
 
